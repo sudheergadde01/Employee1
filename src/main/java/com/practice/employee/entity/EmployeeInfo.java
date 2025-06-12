@@ -1,9 +1,6 @@
 package com.practice.employee.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,6 +15,8 @@ public class EmployeeInfo {
     @Id
     @GeneratedValue
     private Long id;
+    @Column(unique = true)
+    private Long empId;
     private String name;
     private LocalDate dob;
     private Float salary;

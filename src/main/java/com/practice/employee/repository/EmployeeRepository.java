@@ -4,9 +4,9 @@ import com.practice.employee.entity.EmployeeInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface EmployeeRepository extends JpaRepository<EmployeeInfo, Long> {
-    EmployeeInfo findByName(String name);
+    Optional<EmployeeInfo> findByEmpId(Long empId);
 }

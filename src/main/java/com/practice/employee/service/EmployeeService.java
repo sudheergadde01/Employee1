@@ -1,17 +1,18 @@
 package com.practice.employee.service;
 
-import com.practice.employee.request.GetEmployeeRequest;
-import com.practice.employee.request.RegisterEmployeeRequest;
-import com.practice.employee.request.UpdateEmployeeRequest;
+import com.practice.employee.request.EmployeeRequest;
 import com.practice.employee.response.GetEmployeeResponse;
-import com.practice.employee.response.RegisterEmployeeResponse;
-import com.practice.employee.response.UpdateEmployeeResponse;
-
+import com.practice.employee.response.EmployeeResponse;
 
 public interface EmployeeService {
 
-    RegisterEmployeeResponse registerEmployee(RegisterEmployeeRequest registerEmployeeRequest);
+    EmployeeResponse registerEmployee(EmployeeRequest employeeRequest);
 
-    GetEmployeeResponse getEmployee(GetEmployeeRequest getEmployeeRequest);
+    GetEmployeeResponse getEmployeeById(Long id);
+
+    EmployeeResponse updateEmployee(EmployeeRequest employeeRequest);
+
+    EmployeeResponse deleteEmployee(Long id);
+
 
 }

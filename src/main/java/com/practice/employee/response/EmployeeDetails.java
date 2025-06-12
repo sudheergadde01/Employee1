@@ -1,15 +1,15 @@
-package com.practice.employee.request;
+package com.practice.employee.response;
 
 import lombok.Getter;
 import lombok.Setter;
-
 
 import java.time.LocalDate;
 
 @Getter
 @Setter
-public class RegisterEmployeeRequest {
+public class EmployeeDetails {
 
+    private Long empId;
     private String name;
     private LocalDate dob;
     private Float salary;
